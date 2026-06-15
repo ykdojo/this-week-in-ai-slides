@@ -187,6 +187,15 @@
       opacity: 1;
     }
 
+    .slide[data-progressive="reveal"] .reveal {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .slide[data-progressive="reveal"] .reveal.visible {
+      opacity: 1;
+    }
+
     table {
       border-collapse: collapse;
       font-size: 1.4rem;
@@ -258,7 +267,7 @@
   </div>
 
   <!-- Host & guest -->
-  <div class="slide">
+  <div class="slide" data-progressive="reveal">
     <div class="people">
       <div class="person">
         <div class="role">Host</div>
@@ -270,7 +279,7 @@
           <li>Maintains a Claude Code tips repo (8,000+ stars)</li>
         </ul>
       </div>
-      <div class="person">
+      <div class="person reveal">
         <div class="role">Guest</div>
         <div class="name">John Lindquist</div>
         <ul>
@@ -463,6 +472,9 @@
       }
       if (type === 'subtitle') {
         return slide.querySelectorAll('.subtitle');
+      }
+      if (type === 'reveal') {
+        return slide.querySelectorAll('.reveal');
       }
       return slide.querySelectorAll('li');
     }

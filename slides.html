@@ -94,6 +94,48 @@
       font-weight: 600;
     }
 
+    .people {
+      display: flex;
+      gap: 80px;
+      max-width: 1100px;
+      margin-top: 30px;
+    }
+
+    .person {
+      flex: 1;
+      text-align: left;
+    }
+
+    .person .role {
+      font-size: 1.2rem;
+      color: #6cb6ff;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .person .name {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .person ul {
+      list-style: none;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    .person li {
+      margin: 12px 0;
+    }
+
+    .person li::before {
+      content: "• ";
+      color: #888;
+    }
+
     .content .quote {
       color: #fff;
     }
@@ -213,6 +255,32 @@
   <div class="slide">
     <h1>This Week in AI</h1>
     <div class="subtitle">O'Reilly Live &middot; June 15, 2026 &middot; @ykdojo</div>
+  </div>
+
+  <!-- Host & guest -->
+  <div class="slide">
+    <div class="people">
+      <div class="person">
+        <div class="role">Host</div>
+        <div class="name">YK Sugi</div>
+        <ul>
+          <li>Founder of CS Dojo (1.9M+ subscribers)</li>
+          <li>Former Google software engineer</li>
+          <li>Developer experience manager at Eventual</li>
+          <li>Maintains a Claude Code tips repo (8,000+ stars)</li>
+        </ul>
+      </div>
+      <div class="person">
+        <div class="role">Guest</div>
+        <div class="name">John Lindquist</div>
+        <ul>
+          <li>Cofounder of egghead.io</li>
+          <li>Teaches Codex "Power User" workshops</li>
+          <li>500+ programming video tutorials</li>
+          <li>Led engineering for Disney and HBO platforms</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <!-- Section 0: Quick picks (all on one slide) -->
@@ -344,7 +412,7 @@
       </tr>
       <tr>
         <td>SpaceX</td>
-        <td>IPO June 12 (Nasdaq: SPCX); absorbed xAI (~$250B) in an all-stock deal in February - ~$1.25T combined</td>
+        <td>IPO June 12 (Nasdaq: SPCX); absorbed xAI (~$250B) in an all-stock deal in February</td>
         <td>$1.75T - largest IPO ever; raised ~$75B</td>
         <td><a href="https://www.cnbc.com/2026/06/03/spacex-ipo-stock-price-roadshow-musk.html">CNBC</a></td>
       </tr>
